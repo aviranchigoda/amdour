@@ -40,3 +40,12 @@ git push -u origin work
 ```
 
 Replace `<YOUR-USER>` and `<YOUR-REPO>` with your GitHub details. After pushing, you can open a pull request on GitHub.
+
+## Auth Service Endpoints
+
+The auth service exposes two simple endpoints:
+
+- `POST /auth/signup` with `username`, `password`, and `tenant_name` parameters returns a JWT for the new admin user.
+- `GET /tenants/{id}/users` lists all users for a tenant.
+
+These endpoints run against a SQLite database by default when started locally.

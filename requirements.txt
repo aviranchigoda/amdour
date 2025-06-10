@@ -1,3 +1,6 @@
 fastapi
 uvicorn
-
+sqlmodel
+pyjwt
+passlib[bcrypt]
+httpx<0.28
