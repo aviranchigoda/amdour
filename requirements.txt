@@ -4,3 +4,4 @@ sqlmodel
 pyjwt
 passlib[bcrypt]
 httpx<0.28
+openai

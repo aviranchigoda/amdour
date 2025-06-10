@@ -8,6 +8,8 @@ This repository contains a minimal skeleton for an AI-powered automation platfor
 - **Auth Service** (`services/auth_svc`): Handles authentication and tenant user management.
 - **AI Gateway** (`services/ai_gateway`): Forwards completion requests to LLM providers.
 - **Ingestion Worker** (`services/ingestion_worker`): Example CLI that ingests data.
+- **Automation Service** (`services/automation_svc`): Simple orchestration layer that
+  calls the AI gateway and stores task results.
 - **UI** (`ui`): Placeholder front-end.
 
 ## Getting Started

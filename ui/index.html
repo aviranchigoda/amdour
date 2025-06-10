@@ -5,6 +5,26 @@
 </head>
 <body>
 <h1>AI Copilot</h1>
-<p>Placeholder UI</p>
+<form id="task-form">
+  <label>Model: <input id="model" value="gpt-3.5-turbo" /></label><br />
+  <label>Prompt: <input id="prompt" value="Hello" /></label><br />
+  <label>Tenant: <input id="tenant" value="1" /></label><br />
+  <button type="submit">Run</button>
+</form>
+<pre id="output"></pre>
+
+<script>
+document.getElementById('task-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const res = await fetch('/run?model=' +
+    encodeURIComponent(document.getElementById('model').value) +
+    '&prompt=' + encodeURIComponent(document.getElementById('prompt').value) +
+    '&tenant=' + encodeURIComponent(document.getElementById('tenant').value), {
+    method: 'POST'
+  });
+  const data = await res.json();
+  document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+});
+</script>
 </body>
 </html>
