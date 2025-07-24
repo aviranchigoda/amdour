@@ -16,6 +16,10 @@ services:
     build: ./services/automation_svc
     ports:
       - "8003:8000"
+  encryption-svc:
+    build: ./services/encryption_svc
+    ports:
+      - "8004:8000"
   pg-db:
     image: postgres:15
     environment:
