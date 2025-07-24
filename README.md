@@ -10,6 +10,8 @@ This repository contains a minimal skeleton for an AI-powered automation platfor
 - **Ingestion Worker** (`services/ingestion_worker`): Example CLI that ingests data.
 - **Automation Service** (`services/automation_svc`): Simple orchestration layer that
   calls the AI gateway and stores task results.
+- **Encryption Service** (`services/encryption_svc`): Provides basic AES
+  encryption and decryption endpoints.
 - **UI** (`ui`): Placeholder front-end.
 
 ## Getting Started
